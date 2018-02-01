@@ -18,16 +18,14 @@ export default {
   components: {
     ViewBox
   },
-  data () {
-    return {
-      
-    }
+  data() {
+    return {};
   },
   computed: {
     ...mapState({
       direction: state => {
         return state.vux.direction;
-      },
+      }
     })
   }
 };
@@ -41,9 +39,20 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background: #EFEFF4;
 }
 #app {
   height: 100%;
+  a,
+  input,
+  select,
+  button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 #app .vux-header .vux-header-left .left-arrow:before {
   border-color: #fff;
